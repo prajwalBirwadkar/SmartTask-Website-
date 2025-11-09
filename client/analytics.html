@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SmartTask - Analytics</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-content">
+            <div class="nav-brand">
+                <h2>📋 SmartTask</h2>
+            </div>
+            <div class="nav-links">
+                <a href="/dashboard" class="nav-link">Dashboard</a>
+                <a href="/analytics" class="nav-link active">Analytics</a>
+                <a href="/my-tasks" class="nav-link">My Tasks</a>
+                <a href="/team" class="nav-link">Team</a>
+                <a href="/activity" class="nav-link">Activity</a>
+            </div>
+            <div class="nav-menu">
+                <span id="userInfo" class="user-info"></span>
+                <button id="logoutBtn" class="btn btn-secondary">Logout</button>
+            </div>
+        </div>
+    </nav>
+
+    <main class="dashboard">
+        <div class="dashboard-header">
+            <h1>📊 Analytics Dashboard</h1>
+        </div>
+
+        <div class="analytics-grid">
+            <!-- Stats Cards -->
+            <div class="stats-row">
+                <div class="stat-card">
+                    <div class="stat-icon">📋</div>
+                    <div class="stat-content">
+                        <h3 id="totalTasks">0</h3>
+                        <p>Total Tasks</p>
+                    </div>
+                </div>
+                
+                <div class="stat-card">
+                    <div class="stat-icon">✅</div>
+                    <div class="stat-content">
+                        <h3 id="completedTasks">0</h3>
+                        <p>Completed</p>
+                    </div>
+                </div>
+                
+                <div class="stat-card">
+                    <div class="stat-icon">⚡</div>
+                    <div class="stat-content">
+                        <h3 id="inProgressTasks">0</h3>
+                        <p>In Progress</p>
+                    </div>
+                </div>
+                
+                <div class="stat-card">
+                    <div class="stat-icon">⏰</div>
+                    <div class="stat-content">
+                        <h3 id="overdueTasks">0</h3>
+                        <p>Overdue</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Charts -->
+            <div class="charts-row">
+                <div class="chart-card">
+                    <h3>Tasks by Status</h3>
+                    <div id="statusChart" class="chart-content"></div>
+                </div>
+
+                <div class="chart-card">
+                    <h3>Tasks by Priority</h3>
+                    <div id="priorityChart" class="chart-content"></div>
+                </div>
+            </div>
+
+            <div class="charts-row">
+                <div class="chart-card full-width">
+                    <h3>Task Creation Over Time (Last 7 Days)</h3>
+                    <div id="timeChart" class="chart-content"></div>
+                </div>
+            </div>
+
+            <div class="charts-row">
+                <div class="chart-card full-width">
+                    <h3>User Task Distribution</h3>
+                    <div id="userChart" class="chart-content"></div>
+                </div>
+            </div>
+
+            <!-- Completion Rate -->
+            <div class="completion-card">
+                <h3>Overall Completion Rate</h3>
+                <div class="completion-rate">
+                    <div class="completion-circle">
+                        <span id="completionRate">0%</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="js/api.js"></script>
+    <script src="js/analytics.js"></script>
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SmartTask - Activity Log</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-content">
+            <div class="nav-brand">
+                <h2>📋 SmartTask</h2>
+            </div>
+            <div class="nav-links">
+                <a href="/dashboard" class="nav-link">Dashboard</a>
+                <a href="/analytics" class="nav-link">Analytics</a>
+                <a href="/my-tasks" class="nav-link">My Tasks</a>
+                <a href="/team" class="nav-link">Team</a>
+                <a href="/activity" class="nav-link active">Activity</a>
+            </div>
+            <div class="nav-menu">
+                <span id="userInfo" class="user-info"></span>
+                <button id="logoutBtn" class="btn btn-secondary">Logout</button>
+            </div>
+        </div>
+    </nav>
+
+    <main class="dashboard">
+        <div class="dashboard-header">
+            <h1>📜 Activity Log</h1>
+            <div class="activity-filters">
+                <button id="filterAll" class="btn btn-primary active">All Activity</button>
+                <button id="filterMine" class="btn btn-secondary">My Activity</button>
+            </div>
+        </div>
+
+        <div class="activity-timeline" id="activityTimeline">
+            <!-- Activity items will be populated here -->
+        </div>
+    </main>
+
+    <script src="js/api.js"></script>
+    <script src="js/activity.js"></script>
+</body>
+</html>

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SmartTask - Team</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-content">
+            <div class="nav-brand">
+                <h2>📋 SmartTask</h2>
+            </div>
+            <div class="nav-links">
+                <a href="/dashboard" class="nav-link">Dashboard</a>
+                <a href="/analytics" class="nav-link">Analytics</a>
+                <a href="/my-tasks" class="nav-link">My Tasks</a>
+                <a href="/team" class="nav-link active">Team</a>
+                <a href="/activity" class="nav-link">Activity</a>
+            </div>
+            <div class="nav-menu">
+                <span id="userInfo" class="user-info"></span>
+                <button id="logoutBtn" class="btn btn-secondary">Logout</button>
+            </div>
+        </div>
+    </nav>
+
+    <main class="dashboard">
+        <div class="dashboard-header">
+            <h1>👥 Team Members</h1>
+        </div>
+
+        <div class="team-grid" id="teamGrid">
+            <!-- Team members will be populated here -->
+        </div>
+    </main>
+
+    <!-- User Detail Modal -->
+    <div id="userDetailModal" class="modal">
+        <div class="modal-content modal-large">
+            <div class="modal-header">
+                <h2 id="detailUserName"></h2>
+                <button class="close-btn" id="closeDetailModalBtn">&times;</button>
+            </div>
+            <div class="user-detail-body">
+                <div class="user-info">
+                    <div class="info-row">
+                        <span class="info-label">Email:</span>
+                        <span id="detailEmail"></span>
+                    </div>
+                    <div class="info-row">
+                        <span class="info-label">Role:</span>
+                        <span id="detailRole" class="badge"></span>
+                    </div>
+                    <div class="info-row">
+                        <span class="info-label">Member Since:</span>
+                        <span id="detailJoined"></span>
+                    </div>
+                </div>
+
+                <div class="user-stats">
+                    <h3>Task Statistics</h3>
+                    <div class="stats-row">
+                        <div class="stat-item">
+                            <h4 id="userTotalTasks">0</h4>
+                            <p>Total Tasks</p>
+                        </div>
+                        <div class="stat-item">
+                            <h4 id="userCompletedTasks">0</h4>
+                            <p>Completed</p>
+                        </div>
+                        <div class="stat-item">
+                            <h4 id="userInProgressTasks">0</h4>
+                            <p>In Progress</p>
+                        </div>
+                        <div class="stat-item">
+                            <h4 id="userPendingTasks">0</h4>
+                            <p>Pending</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="user-tasks">
+                    <h3>Recent Tasks</h3>
+                    <div id="userTasksList" class="user-tasks-list">
+                        <!-- Tasks will be populated here -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/api.js"></script>
+    <script src="js/team.js"></script>
+</body>
+</html>
